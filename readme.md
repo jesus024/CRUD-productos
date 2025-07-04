@@ -99,6 +99,11 @@ Support for images and multimedia.
 
 Responsive design for mobile devices.
 
+Name: Jesus Alberto Ariza Albarez
+Cc: 1129583704
+Email: jaarizaa028@gmail.com
+Clan: Ciénaga
+
 Full internationalization.
 
 🎯 Conclusion
