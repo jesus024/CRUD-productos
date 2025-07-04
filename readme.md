@@ -2,6 +2,12 @@
 📝 Overview
 Inventory Manager is a web application designed to provide comprehensive inventory management for products. It offers a complete solution to handle products including creation, editing, deletion, and viewing, along with advanced search, filtering, sorting, and real-time statistics features. The app includes simulated persistence, light and dark themes, and an intuitive, responsive interface.
 
+
+Link: 
+
+https://jesus024.github.io/CRUD-productos/
+
+
 🚀 Key Features
 🛠️ Product Management
 Add & edit: Add and modify products with essential attributes: name, quantity, price, and category.
