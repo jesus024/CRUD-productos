@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventoryPro - Advanced Management</title>
+    <meta name="description" content="Advanced inventory management system with modern interface">
+    <meta name="author" content="Advanced Inventory System">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Navigation bar -->
+    <nav class="navigation">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">📦</span>
+                <h1>Inventory</h1>
+            </div>
+            <div class="nav-stats">
+                <span class="stat-item">Total: <span id="total-items">0</span></span>
+                <span class="stat-item">Value: $<span id="total-value">0</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="app-container">
+        <!-- Control panel -->
+        <aside class="control-panel">
+            <div class="panel-header">
+                <h2>Control Panel</h2>
+                <button class="toggle-theme" id="theme-toggle">🌙</button>
+            </div>
+            
+            <div class="form-container">
+                <form id="inventory-form" class="modern-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" name="name" required>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-quantity">Quantity</label>
+                            <input type="number" id="product-quantity" name="quantity" min="1" required>
+                            <span class="input-focus"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price ($)</label>
+                            <input type="number" id="product-price" name="price" step="0.01" min="0" required>
+                            <span class="input-focus"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" name="category" required>
+                            <option value="">Select category</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="books">Books</option>
+                            <option value="home">Home</option>
+                            <option value="sports">Sports</option>
+                        </select>
+                        <span class="input-focus"></span>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <span class="btn-text">Add Product</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancel-btn">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Main area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Product Inventory</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-container">
+                <select id="category-filter">
+                    <option value="">All categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="books">Books</option>
+                    <option value="home">Home</option>
+                    <option value="sports">Sports</option>
+                </select>
+                <select id="sort-filter">
+                    <option value="name">Sort by name</option>
+                    <option value="price">Sort by price</option>
+                    <option value="quantity">Sort by quantity</option>
+                </select>
+                <button class="btn btn-secondary" id="clear-all-btn">
+                    🗑️ Clear All
+                </button>
+            </div>
+
+            <!-- Products list -->
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+
+            <!-- Empty state message -->
+            <div class="empty-state" id="empty-state">
+                <div class="empty-icon">📋</div>
+                <h3>No products in inventory</h3>
+                <p>Start by adding your first product using the control panel</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Confirmation modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Confirm action</h3>
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Are you sure you want to perform this action?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-danger" id="modal-confirm">Confirm</button>
+                <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notifications-container" id="notifications">
+        <!-- Notifications will appear here -->
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>

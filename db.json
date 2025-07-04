@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "AirPods Pro",
+        "quantity": 5,
+        "price": 1299.99,
+        "category": "electronics"
+      },
+      {
+        "id": 2,
+        "name": "Camiseta Deportiva",
+        "quantity": 25,
+        "price": 29.99,
+        "category": "clothing"
+      }
+    ]
+  }
+  
