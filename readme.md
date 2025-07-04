@@ -99,6 +99,9 @@ Support for images and multimedia.
 
 Responsive design for mobile devices.
 
+
+Contact:
+
 Name: Jesus Alberto Ariza Albarez
 
 Cc: 1129583704
